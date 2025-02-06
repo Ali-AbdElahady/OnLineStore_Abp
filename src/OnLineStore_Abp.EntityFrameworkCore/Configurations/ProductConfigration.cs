@@ -16,10 +16,14 @@ namespace OnLineStore_Abp.Configurations
         {
             builder.ConfigureByConvention();
 
-            builder.Property(x => x.NameAr).HasMaxLength(OnLineStore_AbpConsts.GeneralTextMaxLength);
-            builder.Property(x => x.NameEn).HasMaxLength(OnLineStore_AbpConsts.GeneralTextMaxLength);
-            builder.Property(x => x.DescriptionAr).HasMaxLength(OnLineStore_AbpConsts.DescriptionMaxLength);
-            builder.Property(x => x.DescriptionEn).HasMaxLength(OnLineStore_AbpConsts.DescriptionMaxLength);
+            builder.Property(x => x.NameAr)
+                .HasMaxLength(OnLineStore_AbpConsts.GeneralTextMaxLength);
+            builder.Property(x => x.NameEn)
+                .HasMaxLength(OnLineStore_AbpConsts.GeneralTextMaxLength);
+            builder.Property(x => x.DescriptionAr)
+                .HasMaxLength(OnLineStore_AbpConsts.DescriptionMaxLength);
+            builder.Property(x => x.DescriptionEn)
+                .HasMaxLength(OnLineStore_AbpConsts.DescriptionMaxLength);
 
             builder.HasOne(x => x.Category)
                 .WithMany()
